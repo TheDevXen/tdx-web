@@ -1,0 +1,31 @@
+head
+	link(href="/style.css" rel="stylesheet")
+-
+	const user = {
+		name: 'Xen',
+		username: 'thedevxen',
+		gravatar: 'https://avatars2.githubusercontent.com/u/31907722?s=460&v=4'
+	}
+
+.user-profile
+	.profile-card
+		h1.profile-card__title= user.name
+		p.profile-card__subtitle= user.username
+		div(align="center")
+			p.desc Hi, I am 16-years old passionate web and android developer from India.
+		img.profile-card__avatar(src=user.gravatar alt=`Avatar for ${user.name}`)
+	
+	.profile-projects
+		h2 #{user.name}'s projects
+		ol.cards
+			li
+				a.card(href='https://t.me/terbiumbot' target='_blank')
+					h4.card__title Terbium Bot
+					p Terbium is an advanced group management telegram bot.
+					p.card__meta Telegram
+			li
+				a.card(href='https://bit.ly/BotMateApp' target='_blank')
+					h4.card__title BotMate
+					p BotMate is an android appication for building telegram bots without any coding.
+					p.card__meta Android
+						
